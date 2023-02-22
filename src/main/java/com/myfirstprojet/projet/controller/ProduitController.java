@@ -1,12 +1,11 @@
-package com.MyFirstProjet.Projet.Controller;
+package com.myfirstprojet.projet.controller;
 
-import com.MyFirstProjet.Projet.ExcelFileExporter.PDFGenerator;
-import com.MyFirstProjet.Projet.ExcelFileExporter.ProduitExcelExporter;
-import com.MyFirstProjet.Projet.entity.Categories;
-import com.MyFirstProjet.Projet.entity.Produit;
-import com.MyFirstProjet.Projet.repository.CategoriesRepository;
-import com.MyFirstProjet.Projet.repository.ProduitRepository;
-import com.MyFirstProjet.Projet.service.ProduitService;
+import com.myfirstprojet.projet.excelfileexporter.PDFGenerator;
+import com.myfirstprojet.projet.excelfileexporter.ProduitExcelExporter;
+import com.myfirstprojet.projet.entity.Categories;
+import com.myfirstprojet.projet.entity.Produit;
+import com.myfirstprojet.projet.repository.ProduitRepository;
+import com.myfirstprojet.projet.service.ProduitService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +18,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
@@ -33,7 +30,10 @@ public class ProduitController {
     private ProduitService produitService;
     @Autowired
     private ProduitRepository produitRepository;
-    private final CategoriesRepository categoriesRepository;
+    private static final String MESSAGE_KEYY = "message";
+
+    private static final String CATEGORY_NOT_FOUND = "Category not found or matched";
+
 
     @GetMapping("/produit")
     public List<Produit> getProduit() {
@@ -42,7 +42,7 @@ public class ProduitController {
     }
 
 
-    @GetMapping("/produit/{Id}")
+    @GetMapping("/produit/{id}")
     public Produit getProduitById(@PathVariable Long id) {
         return produitService.getproduitbyid(id)
                 .orElseThrow(() -> new EntityNotFoundException("Requested product not found"));
@@ -53,16 +53,14 @@ public class ProduitController {
 
         return produitService.save(produit);
     }
-    @PutMapping("/Produit/{Id}")
-    public ResponseEntity<?> update (@RequestBody Produit produit, @PathVariable Long Id)
-    {
-        if (produitService.existsById(Id))
-        {
-            Produit produit1 = produitService.getproduitbyid(Id).
-                    orElseThrow
-                            (
-                                    ()->new EntityNotFoundException("Requested task not found")
-                            );
+    public static final String ERROR_MESSAGE = "Requested task not found";
+
+    @PutMapping("/Produit/{id}")
+    public ResponseEntity<Produit> update(@RequestBody Produit produit, @PathVariable Long id) {
+        if (produitService.existsById(id)) {
+            Produit produit1 = produitService.getproduitbyid(id).orElseThrow(
+                    () -> new EntityNotFoundException(ERROR_MESSAGE)
+            );
             produit1.setNom(produit.getNom());
             produit1.setQt(produit.getQt());
             produit1.setDisponible(produit.getDisponible());
@@ -74,29 +72,26 @@ public class ProduitController {
             }
             produitService.save(produit1);
 
-            //returned type Task
-            return ResponseEntity.ok(). body (produit1);
-        }
-        else
-        {
+            return ResponseEntity.ok().body(produit1);
+        } else {
             HashMap<String,String> message = new HashMap<>();
-            message.put("message", Id + " task not found or matched");
-            //returned type hashmap
-            return ResponseEntity.status (HttpStatus.NOT_FOUND).body (message);
+            message.put(MESSAGE_KEYY, ERROR_MESSAGE);
+
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 
     @DeleteMapping("Produit/{id}")
-    public ResponseEntity<?> deleteproduit(@PathVariable Long id) {
+    public ResponseEntity<HashMap<String, String>> deleteproduit(@PathVariable Long id) {
         if (produitService.existsById(id)) {
             produitService.deleteProduit(id);
             HashMap<String, String> message = new HashMap<>();
-            message.put("message", "Categorie with id " + id + "deleted successfully.");
+            message.put(MESSAGE_KEYY, "Categorie with id " + id + "deleted successfully.");
             //returned type hashmap I
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         } else {
             HashMap<String, String> message = new HashMap<>();
-            message.put("message", id + " task not found or matched");
+            message.put(MESSAGE_KEYY, id + " task not found or matched");
             //returned type hashmap
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
         }
@@ -118,10 +113,10 @@ public class ProduitController {
     }
 
     @GetMapping(value = "/downloadPDF")
-    public ResponseEntity<InputStreamResource> downloadPDF() throws IOException {
+    public ResponseEntity<InputStreamResource> downloadPDF() {
         List<Produit> produits = produitRepository.findAll();
 
-       ByteArrayInputStream bis = PDFGenerator.produitPDFReport(produits);
+        ByteArrayInputStream bis = PDFGenerator.produitPDFReport(produits);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=produits.pdf");
@@ -132,6 +127,5 @@ public class ProduitController {
                 .contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
     }
-
 
 }

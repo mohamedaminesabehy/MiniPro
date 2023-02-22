@@ -1,18 +1,20 @@
-package com.MyFirstProjet.Projet.ExcelFileExporter;
+package com.myfirstprojet.projet.excelfileexporter;
 import org.apache.poi.ss.usermodel.Font;
-import com.MyFirstProjet.Projet.entity.Produit;
+import com.myfirstprojet.projet.entity.Produit;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-public class ProduitExcelExporter {
+public  class ProduitExcelExporter {
+
+    private ProduitExcelExporter() {
+    }
 
     public static ByteArrayInputStream produitsToExcel(List<Produit> produits) throws IOException {
-        String[] columns = {"Id", "nom", "Qt", "Disponible", "datecreation", "datemodification", "Categorie Id"};
+        String[] columns = {"id", "nom", "qt", "Disponible", "datecreation", "datemodification", "Categorie id"};
         try (
                 Workbook workbook = new XSSFWorkbook();
                 ByteArrayOutputStream out = new ByteArrayOutputStream();

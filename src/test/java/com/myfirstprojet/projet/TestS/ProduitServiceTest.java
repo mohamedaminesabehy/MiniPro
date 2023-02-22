@@ -1,9 +1,9 @@
-package com.MyFirstProjet.Projet.TestS;
+package com.myfirstprojet.projet.TestS;
 
-import com.MyFirstProjet.Projet.entity.Categories;
-import com.MyFirstProjet.Projet.entity.Produit;
-import com.MyFirstProjet.Projet.service.CategoriesService;
-import com.MyFirstProjet.Projet.service.ProduitService;
+import com.myfirstprojet.projet.entity.Categories;
+import com.myfirstprojet.projet.entity.Produit;
+import com.myfirstprojet.projet.service.CategoriesService;
+import com.myfirstprojet.projet.service.ProduitService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

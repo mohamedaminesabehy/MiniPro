@@ -1,7 +1,6 @@
-package com.MyFirstProjet.Projet.service;
-import com.MyFirstProjet.Projet.repository.CategoriesRepository;
-import com.MyFirstProjet.Projet.entity.Categories;
-import lombok.Builder;
+package com.myfirstprojet.projet.service;
+import com.myfirstprojet.projet.repository.CategoriesRepository;
+import com.myfirstprojet.projet.entity.Categories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -23,10 +22,10 @@ public class CategoriesService {
         return categoriesRepository.findAll();
     }
 
-    public Optional<Categories> getcategoriesbyid(Long Id)
+    public Optional<Categories> getcategoriesbyid(Long id)
     {
 
-        return categoriesRepository.findById(Id);
+        return categoriesRepository.findById(id);
     }
 
     public Categories save(Categories categories)
@@ -34,13 +33,13 @@ public class CategoriesService {
 
         return categoriesRepository.saveAndFlush(categories);
     }
-    public boolean existsById(Long Id){
-        return categoriesRepository.existsById(Id);
+    public boolean existsById(Long id){
+        return categoriesRepository.existsById(id);
 }
 
-    public void deleteCategories (Long Id)
+    public void deleteCategories (Long id)
     {
-        categoriesRepository.deleteById(Id);
+        categoriesRepository.deleteById(id);
 
     }
     public List<Categories> search(String query) {

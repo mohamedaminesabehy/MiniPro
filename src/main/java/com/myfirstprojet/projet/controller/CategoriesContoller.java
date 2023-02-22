@@ -1,8 +1,8 @@
-package com.MyFirstProjet.Projet.Controller;
-import com.MyFirstProjet.Projet.entity.Categories;
-import com.MyFirstProjet.Projet.entity.Produit;
-import com.MyFirstProjet.Projet.service.CategoriesService;
-import com.MyFirstProjet.Projet.service.ProduitService;
+package com.myfirstprojet.projet.controller;
+import com.myfirstprojet.projet.entity.Categories;
+import com.myfirstprojet.projet.entity.Produit;
+import com.myfirstprojet.projet.service.CategoriesService;
+import com.myfirstprojet.projet.service.ProduitService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +20,9 @@ public class CategoriesContoller {
     private final CategoriesService categoriesService;
     @Autowired
     private final ProduitService produitService;
+    private static final String CATEGORY_NOT_FOUND = "Category not found or matched";
+    private static final String MESSAGE_KEYY = "message";
+
     @Autowired
     public CategoriesContoller(CategoriesService categoriesService, ProduitService produitService) {
         this.categoriesService = categoriesService;
@@ -38,66 +41,59 @@ public class CategoriesContoller {
     }
 
 
-    @GetMapping("/categorie/{Id}")
+    @GetMapping("/categorie/{id}")
 
-     public Categories getCategorieId(@PathVariable Long Id) {
-        return categoriesService.getcategoriesbyid(Id).
+     public Categories getCategorieId(@PathVariable Long id) {
+        return categoriesService.getcategoriesbyid(id).
                 orElseThrow(
 
                         () -> new EntityNotFoundException("Requested task not found")
                 );
 
     }
-    @PostMapping("/categories")
+    @PostMapping("/Categories")
     public Categories addCategories (@RequestBody Categories categories)
     {
         return categoriesService.save(categories);
     }
 
-    @PutMapping("Update/{Id}")
-    public ResponseEntity<?> UpdateCategorie (@RequestBody Categories categorie, @PathVariable Long Id)
-    {
-        if (categoriesService.existsById(Id))
-        {
-            Categories categorie1 = categoriesService.getcategoriesbyid(Id).
-                    orElseThrow
-                (
-                        ()->new EntityNotFoundException ("Requested task not found")
-                );
+
+
+    @PutMapping("Update/{id}")
+    public ResponseEntity<Categories> updateCategorie(@RequestBody Categories categorie, @PathVariable Long id) {
+        if (categoriesService.existsById(id)) {
+            Categories categorie1 = categoriesService.getcategoriesbyid(id)
+                    .orElseThrow(() -> new EntityNotFoundException(CATEGORY_NOT_FOUND));
             categorie1.setNom(categorie.getNom());
             categorie1.setQt(categorie.getQt());
             categorie1.setDatecreation(categorie.getDatecreation());
             categorie1.setDatemodification(categorie.getDatemodification());
             categoriesService.save(categorie1);
 
-             //returned type Task
-            return ResponseEntity.ok(). body (categorie1);
+            return ResponseEntity.ok().body(categorie1);
+        } else {
+            HashMap<String, String> message = new HashMap<>();
+            message.put(MESSAGE_KEYY, CATEGORY_NOT_FOUND);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
-        else
-        {
-            HashMap<String,String> message = new HashMap<>();
-            message.put("message", Id + " task not found or matched");
-           //returned type hashmap
-            return ResponseEntity.status (HttpStatus.NOT_FOUND).body (message);
-        }
-        }
+    }
+    private static final String MESSAGE_KEY = "message";
+    private static final String MESSAGE_CATEGORY_DELETED_SUCCESSFULLY = "Category with id %d deleted successfully";
+    private static final String MESSAGE_CATEGORY_NOT_FOUND = "Category with id %d not found";
+
     @DeleteMapping("delete/{id}")
-    public ResponseEntity<?> deleteCategorie(@PathVariable Long id)
-    {
-        if (categoriesService.existsById(id))
-        {
+    public ResponseEntity<HashMap<String, String>> deleteCategorie(@PathVariable Long id) {
+        if (categoriesService.existsById(id)) {
             categoriesService.deleteCategories(id);
-            HashMap<String, String> message = new HashMap<>();
-            message.put("message", "Categorie with id " + id + "deleted successfully.");
-            //returned type hashmap I
-            return ResponseEntity.status (HttpStatus. NOT_FOUND).body(message);
-        }
-        else
-        {
-            HashMap<String, String> message = new HashMap<>();
-            message.put("message", id + " task not found or matched");
-            //returned type hashmap
-            return ResponseEntity.status (HttpStatus.NOT_FOUND).body(message);
+            String message = String.format(MESSAGE_CATEGORY_DELETED_SUCCESSFULLY, id);
+            HashMap<String, String> response = new HashMap<>();
+            response.put(MESSAGE_KEY, message);
+            return ResponseEntity.ok().body(response);
+        } else {
+            String message = String.format(MESSAGE_CATEGORY_NOT_FOUND, id);
+            HashMap<String, String> response = new HashMap<>();
+            response.put(MESSAGE_KEY, message);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
     }
 

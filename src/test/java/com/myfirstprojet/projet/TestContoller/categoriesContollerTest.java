@@ -1,12 +1,11 @@
-package com.MyFirstProjet.Projet.TestContoller;
-import com.MyFirstProjet.Projet.Controller.CategoriesContoller;
-import com.MyFirstProjet.Projet.entity.Categories;
-import com.MyFirstProjet.Projet.service.CategoriesService;
+package com.myfirstprojet.projet.TestContoller;
+import com.myfirstprojet.projet.controller.CategoriesContoller;
+import com.myfirstprojet.projet.entity.Categories;
+import com.myfirstprojet.projet.service.CategoriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+
 
 import java.sql.Timestamp;
 import java.util.Optional;
@@ -16,7 +15,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 @SpringBootTest
-public class CategoriesContollerTest {
+public class categoriesContollerTest {
 
     @Autowired
     private CategoriesService service;
@@ -27,7 +26,7 @@ public class CategoriesContollerTest {
     public void addCategoriesTest() {
         Categories categorie = Categories.builder()
                 .nom("Electronics")
-                .Qt(10)
+                .qt(10)
                 .datecreation(new Timestamp(System.currentTimeMillis()))
                 .datemodification(new Timestamp(System.currentTimeMillis()))
                 .build();

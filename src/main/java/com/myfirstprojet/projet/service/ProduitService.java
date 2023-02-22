@@ -1,7 +1,7 @@
-package com.MyFirstProjet.Projet.service;
+package com.myfirstprojet.projet.service;
 
-import com.MyFirstProjet.Projet.entity.Produit;
-import com.MyFirstProjet.Projet.repository.ProduitRepository;
+import com.myfirstprojet.projet.entity.Produit;
+import com.myfirstprojet.projet.repository.ProduitRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,10 +28,10 @@ public class ProduitService {
 
 
 
-    public Optional<Produit> getproduitbyid(Long Id)
+    public Optional<Produit> getproduitbyid(Long id)
     {
 
-        return produitRepository.findById(Id);
+        return produitRepository.findById(id);
     }
 
 
@@ -42,14 +42,14 @@ public class ProduitService {
 
         return produitRepository.saveAndFlush(produit);
     }
-    public boolean existsById(Long Id){
+    public boolean existsById(Long id){
 
-        return produitRepository.existsById(Id);
+        return produitRepository.existsById(id);
     }
 
-    public void deleteProduit (Long Id)
+    public void deleteProduit (Long id)
     {
-        produitRepository.deleteById(Id);
+        produitRepository.deleteById(id);
 
     }
 

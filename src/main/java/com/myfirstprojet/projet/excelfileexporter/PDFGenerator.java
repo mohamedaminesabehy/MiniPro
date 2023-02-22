@@ -1,5 +1,7 @@
-package com.MyFirstProjet.Projet.ExcelFileExporter;
-import com.MyFirstProjet.Projet.entity.Produit;
+package com.myfirstprojet.projet.excelfileexporter;
+import com.itextpdf.text.log.Logger;
+import com.itextpdf.text.log.LoggerFactory;
+import com.myfirstprojet.projet.entity.Produit;
 import com.lowagie.text.*;
 import com.lowagie.text.Font;
 import com.lowagie.text.pdf.PdfPCell;
@@ -11,6 +13,10 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 public class PDFGenerator {
+    private static final Logger logger = LoggerFactory.getLogger(PDFGenerator.class);
+
+    private PDFGenerator(){
+    }
     public static ByteArrayInputStream produitPDFReport(List<Produit> produits) {
         Document document = new Document() {
         };
@@ -24,7 +30,7 @@ public class PDFGenerator {
             Font headFont = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
 
             PdfPCell hcell;
-            hcell = new PdfPCell(new Phrase("Id", headFont));
+            hcell = new PdfPCell(new Phrase("id", headFont));
             hcell.setHorizontalAlignment(Element.ALIGN_CENTER);
             table.addCell(hcell);
 
@@ -85,7 +91,7 @@ public class PDFGenerator {
             document.close();
 
         } catch (DocumentException ex) {
-            System.out.println("Error occurred: {0}" + ex);
+            logger.error("Error occurred: {}", ex);
         }
 
         return new ByteArrayInputStream(out.toByteArray());

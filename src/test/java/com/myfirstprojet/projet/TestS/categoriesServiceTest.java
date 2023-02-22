@@ -1,9 +1,9 @@
-package com.MyFirstProjet.Projet.TestS;
+package com.myfirstprojet.projet.TestS;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.MyFirstProjet.Projet.entity.Categories;
-import com.MyFirstProjet.Projet.service.CategoriesService;
+import com.myfirstprojet.projet.entity.Categories;
+import com.myfirstprojet.projet.service.CategoriesService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @SpringBootTest
-public class CategoriesServiceTest {
+public class categoriesServiceTest {
     @Autowired
     private CategoriesService service;
 
@@ -39,7 +39,7 @@ public class CategoriesServiceTest {
     public void saveCategoriesTest() {
         Categories categorie = Categories.builder()
                 .nom("Electronics")
-                .Qt(10)
+                .qt(10)
                 .datecreation(new Timestamp(System.currentTimeMillis()))
                 .datemodification(new Timestamp(System.currentTimeMillis()))
                 .build();
