@@ -27,5 +27,3 @@ r
 Bsrc/main/java/com/myfirstprojet/projet/service/ProduitService.java,4\6\46772364f4d99874b1383097db81d28ef357188a
 z
 Jsrc/main/java/com/myfirstprojet/projet/excelfileexporter/PDFGenerator.java,8\3\83bb9605ea3258940b8d066c93bcc3a4f0768f39
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
