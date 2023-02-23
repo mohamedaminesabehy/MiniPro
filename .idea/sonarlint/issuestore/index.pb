@@ -31,3 +31,11 @@ z
 Jsrc/main/java/com/myfirstprojet/projet/excelfileexporter/PDFGenerator.java,8\3\83bb9605ea3258940b8d066c93bcc3a4f0768f39
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+z
+Jsrc/main/java/com/myfirstprojet/projet/controller/CategoriesContoller.java,c\5\c5e447386289363391c36e70264d2fdc3f5255c6
+Å
+Qsrc/test/java/com/myfirstprojet/projet/TestContoller/categoriesContollerTest.java,f\a\fae3aaf2b82f221ee4447363141a7b58156eab0a
+m
+=src/main/java/com/myfirstprojet/projet/ProjetApplication.java,1\9\19f2b59143891bcbf219cd02755753af3504a2f0
+x
+Hsrc/main/java/com/myfirstprojet/projet/controller/ProduitController.java,4\1\41fb7dba0d45e07a131a74028cc6f3e0db78a4d1
