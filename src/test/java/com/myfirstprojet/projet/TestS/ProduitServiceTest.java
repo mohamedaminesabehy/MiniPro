@@ -4,6 +4,7 @@ import com.myfirstprojet.projet.entity.Categories;
 import com.myfirstprojet.projet.entity.Produit;
 import com.myfirstprojet.projet.service.CategoriesService;
 import com.myfirstprojet.projet.service.ProduitService;
+import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 @SpringBootTest
  class ProduitServiceTest {
     @Autowired
@@ -32,13 +32,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
         Optional<Produit> produit = service.getproduitbyid(1L);
         assertThat(produit).isNotNull();
     }
-    @Test
-     void deleteProduitTest() {
-        Long id = 1L;
-        service.deleteProduit(id);
-        Optional<Produit> produit = service.getproduitbyid(id);
-        assertThat(produit).isEmpty();
-    }
+
     @Test
      void testSaveProduit() {
         // Arrange
@@ -65,4 +59,28 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
         assertThat(savedProduit.getDatecreation()).isEqualTo(produit.getDatecreation());
         assertThat(savedProduit.getDatemodification()).isEqualTo(produit.getDatemodification());
     }
+   @Test
+   void deleteProduitTest() {
+      // Arrange
+      Categories categorie = new Categories();
+      categorie.setNom("informatique");
+      Categories savedCategorie = categoriesService.save(categorie);
+
+      Produit produit = new Produit();
+      produit.setNom("nom de produit");
+      produit.setQt(10);
+      produit.setDisponible(true);
+      produit.setDatecreation(new Timestamp(System.currentTimeMillis()));
+      produit.setDatemodification(new Timestamp(System.currentTimeMillis()));
+      produit.setCategorieid(savedCategorie);
+
+      Produit savedProduit1 = service.save(produit);
+
+      // Act
+      service.deleteProduit(savedProduit1.getId());
+      Optional<Produit> deletedProduit = service.getproduitbyid(savedProduit1.getId());
+
+      // Assert
+      assertThat(deletedProduit).isEmpty();
+   }
 }

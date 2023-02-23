@@ -5,32 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea4753b2-fcd3-414a-8854-215b47d12c5e" name="Changes" comment="tttt">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06f65155ec73600b9fc5c4dc2883d4bb84d8e284" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/0/6/06f65155ec73600b9fc5c4dc2883d4bb84d8e284" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/197ec6e0e59ba1a34ed4d20920a5c4469a98c76a" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/1/9/197ec6e0e59ba1a34ed4d20920a5c4469a98c76a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37ec09222dfe93fe0dbef2adf557f712c68327ef" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/3/7/37ec09222dfe93fe0dbef2adf557f712c68327ef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/46772364f4d99874b1383097db81d28ef357188a" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/4/6/46772364f4d99874b1383097db81d28ef357188a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75340f75aa452d9366506824469d046dd1e9b961" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/7/5/75340f75aa452d9366506824469d046dd1e9b961" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78a4879456d0601b9490109bb1608daa9caa9537" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/7/8/78a4879456d0601b9490109bb1608daa9caa9537" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83bb9605ea3258940b8d066c93bcc3a4f0768f39" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/8/3/83bb9605ea3258940b8d066c93bcc3a4f0768f39" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/b/8b5594b8cbec9601379b0e0ba577ed4d9e2c31b8" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/8/b/8b5594b8cbec9601379b0e0ba577ed4d9e2c31b8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aafc5685583b2cc7af7701e37ce2bf89d66cf3a9" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/a/a/aafc5685583b2cc7af7701e37ce2bf89d66cf3a9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b080eb9dc19278713c94593de4766191869aebc6" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/b/0/b080eb9dc19278713c94593de4766191869aebc6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3d924cddaf2222ef411ba0d87eaf094a94f8b8a" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/b/3/b3d924cddaf2222ef411ba0d87eaf094a94f8b8a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c465c76b56b5a1fa54c98bb64303985cc820ce61" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/c/4/c465c76b56b5a1fa54c98bb64303985cc820ce61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dde9cf125861a057cb0a92eaea04e4c4bc1cf79e" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/d/d/dde9cf125861a057cb0a92eaea04e4c4bc1cf79e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/dfaba5ed47b5cac5c072304b4b395aacc66b0326" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/d/f/dfaba5ed47b5cac5c072304b4b395aacc66b0326" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestContoller/categoriesContollerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestContoller/CategoriesContollerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestContoller/CategoriesContollerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestContoller/categoriesContollerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestS/CategoriesServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestS/categoriesServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestS/ProduitServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestS/ProduitServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestS/categoriesServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/myfirstprojet/projet/TestS/CategoriesServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/myfirstprojet/projet/TestContoller/categoriesContollerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/myfirstprojet/projet/TestContoller/categoriesContollerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/myfirstprojet/projet/TestS/ProduitServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/myfirstprojet/projet/TestS/ProduitServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/myfirstprojet/projet/TestS/categoriesServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/myfirstprojet/projet/TestS/categoriesServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +79,7 @@
       <recent name="C:\StageEX\Projet\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CategoriesContollerTest.addCategoriesTest">
+  <component name="RunManager" selected="JUnit.categoriesContollerTest.addCategoriesTest">
     <configuration name="ProjetApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.ProjetApplication" />
       <module name="Projet" />
@@ -111,39 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CategoriesContollerTest.addCategoriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Projet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myfirstprojet.projet.TestContoller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myfirstprojet.projet.TestContoller" />
-      <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestContoller.CategoriesContollerTest" />
-      <option name="METHOD_NAME" value="addCategoriesTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CategoriesContollerTest.deleteCategorieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Projet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myfirstprojet.projet.TestContoller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myfirstprojet.projet.TestContoller" />
-      <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestContoller.CategoriesContollerTest" />
-      <option name="METHOD_NAME" value="deleteCategorieTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CategoriesServiceTest.getCategoriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProduitServiceTest.deleteProduitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Projet" />
       <extension name="coverage">
         <pattern>
@@ -152,8 +102,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.myfirstprojet.projet.TestS" />
-      <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestS.CategoriesServiceTest" />
-      <option name="METHOD_NAME" value="getCategoriesTest" />
+      <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestS.ProduitServiceTest" />
+      <option name="METHOD_NAME" value="deleteProduitTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,7 +117,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.MyFirstProjet.Projet.TestS" />
+      <option name="PACKAGE_NAME" value="com.myfirstprojet.projet.TestS" />
       <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestS.ProduitServiceTest" />
       <option name="METHOD_NAME" value="getProduitTest" />
       <option name="TEST_OBJECT" value="method" />
@@ -175,13 +125,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProduitServiceTest.testSaveProduit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myfirstprojet.projet.TestS.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myfirstprojet.projet.TestS" />
+      <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestS.ProduitServiceTest" />
+      <option name="METHOD_NAME" value="testSaveProduit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="categoriesContollerTest.addCategoriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myfirstprojet.projet.TestContoller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myfirstprojet.projet.TestContoller" />
+      <option name="MAIN_CLASS_NAME" value="com.myfirstprojet.projet.TestContoller.categoriesContollerTest" />
+      <option name="METHOD_NAME" value="addCategoriesTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CategoriesContollerTest.addCategoriesTest" />
-        <item itemvalue="Application.ProjetApplication" />
-        <item itemvalue="JUnit.CategoriesContollerTest.deleteCategorieTest" />
-        <item itemvalue="JUnit.CategoriesServiceTest.getCategoriesTest" />
+        <item itemvalue="JUnit.categoriesContollerTest.addCategoriesTest" />
         <item itemvalue="JUnit.ProduitServiceTest.getProduitTest" />
+        <item itemvalue="JUnit.ProduitServiceTest.testSaveProduit" />
+        <item itemvalue="JUnit.ProduitServiceTest.deleteProduitTest" />
+        <item itemvalue="Application.ProjetApplication" />
       </list>
     </recent_temporary>
   </component>
