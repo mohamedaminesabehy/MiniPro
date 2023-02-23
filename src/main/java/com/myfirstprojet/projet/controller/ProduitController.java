@@ -32,7 +32,7 @@ public class ProduitController {
     private ProduitRepository produitRepository;
     private static final String MESSAGE_KEYY = "message";
 
-    private static final String CATEGORY_NOT_FOUND = "Category not found or matched";
+    private static final String CATEGORY_NOT_FOUND = "Category not found or matchedd";
 
 
     @GetMapping("/produit")
