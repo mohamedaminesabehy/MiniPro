@@ -15,7 +15,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
 @SpringBootTest
-public class categoriesContollerTest {
+ class CategoriesContollerTest {
 
     @Autowired
     private CategoriesService service;
@@ -23,7 +23,7 @@ public class categoriesContollerTest {
     private CategoriesContoller controller;
 
     @Test
-    public void addCategoriesTest() {
+     void addCategoriesTest() {
         Categories categorie = Categories.builder()
                 .nom("Electronics")
                 .qt(10)
@@ -38,7 +38,7 @@ public class categoriesContollerTest {
         assertThat(savedCategories.getQt()).isEqualTo(10);
     }
     @Test
-    public void deleteCategorieTest() {
+     void deleteCategorieTest() {
         Long id = 39L;
         service.deleteCategories(id);
         Optional<Categories> categorie = service.getcategoriesbyid(id);

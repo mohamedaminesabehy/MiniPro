@@ -15,7 +15,7 @@ import java.util.Optional;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest
-public class ProduitServiceTest {
+ class ProduitServiceTest {
     @Autowired
     private ProduitService service;
     @Autowired
@@ -23,24 +23,24 @@ public class ProduitServiceTest {
 
 
     @Test
-    public void getProduitTest() {
+     void getProduitTest() {
         List<Produit> produit = service.getProduit();
         assertThat(produit).isNotNull();
     }
     @Test
-    public void getProduitByIdTest() {
+     void getProduitByIdTest() {
         Optional<Produit> produit = service.getproduitbyid(1L);
         assertThat(produit).isNotNull();
     }
     @Test
-    public void deleteProduitTest() {
+     void deleteProduitTest() {
         Long id = 1L;
         service.deleteProduit(id);
         Optional<Produit> produit = service.getproduitbyid(id);
         assertThat(produit).isEmpty();
     }
     @Test
-    public void testSaveProduit() {
+     void testSaveProduit() {
         // Arrange
         Categories categorie = new Categories();
         categorie.setNom("informatique ");

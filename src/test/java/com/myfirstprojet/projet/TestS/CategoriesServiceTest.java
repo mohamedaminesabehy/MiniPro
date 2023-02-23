@@ -13,30 +13,30 @@ import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @SpringBootTest
-public class categoriesServiceTest {
+ class CategoriesServiceTest {
     @Autowired
     private CategoriesService service;
 
 
     @Test
-    public void getCategoriesTest() {
+     void getCategoriesTest() {
         List<Categories> categories = service.getCategories();
         assertThat(categories).isNotNull();
     }
     @Test
-    public void getCategoriesByIdTest() {
+     void getCategoriesByIdTest() {
         Optional<Categories> categorie = service.getcategoriesbyid(1L);
         assertThat(categorie).isNotNull();
     }
     @Test
-    public void deleteCategoriesTest() {
+     void deleteCategoriesTest() {
         Long id = 1L;
         service.deleteCategories(id);
         Optional<Categories> categorie = service.getcategoriesbyid(id);
         assertThat(categorie).isEmpty();
     }
     @Test
-    public void saveCategoriesTest() {
+     void saveCategoriesTest() {
         Categories categorie = Categories.builder()
                 .nom("Electronics")
                 .qt(10)
