@@ -10,7 +10,7 @@ pipeline {
                 ])
             }
         }
-  stage('MVN CLEAN') {
+  stage('MVN CLEA') {
               steps {
                  withMaven() {
                 bat 'mvn clean compile'
