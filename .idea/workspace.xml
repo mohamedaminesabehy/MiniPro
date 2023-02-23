@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ea4753b2-fcd3-414a-8854-215b47d12c5e" name="Changes" comment="commi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+<<<<<<< HEAD
+    <list default="true" id="cfe9b3f7-af58-4b0f-a890-752daa3739e2" name="Changes" comment="commi">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/19f2b59143891bcbf219cd02755753af3504a2f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41fb7dba0d45e07a131a74028cc6f3e0db78a4d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5e447386289363391c36e70264d2fdc3f5255c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fae3aaf2b82f221ee4447363141a7b58156eab0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/jenkinsfile" afterDir="false" />
+=======
+    <list default="true" id="cfe9b3f7-af58-4b0f-a890-752daa3739e2" name="Changes" comment="commit3">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myfirstprojet/projet/controller/ProduitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myfirstprojet/projet/controller/ProduitController.java" afterDir="false" />
+>>>>>>> origin/main
+>>>>>>> 47977e7d4ae93925bd12ba2a55a9d98e358efb57
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
