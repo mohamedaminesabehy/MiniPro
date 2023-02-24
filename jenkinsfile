@@ -43,6 +43,17 @@ pipeline {
                                                 -Dsonar.login=sqp_5b3f89f0523442a9c19005e905ea61fd7ab92e77'
                                       }
                                   }
+                                       stage('Docker login') {
 
+                                         steps {
+                                         bat 'echo "login Docker ...."'
+                                        bat'docker login -u mohamedaminesabehy -p clubafrican123'
+                                                                                                    }  }
+                                               stage('Docker push') {
+
+                                              steps {
+                                             bat 'echo "Docker is pushing ...."'
+                                              	bat 'docker push mohamedaminesabehy/Projet-1.0.0:latest'
+                                                                                                    }  }
       }
     }
