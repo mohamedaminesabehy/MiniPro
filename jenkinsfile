@@ -46,7 +46,7 @@ pipeline {
                                   stage('Build docker image'){
                                                         steps{
                                                                 script{
-                                                                    bat 'docker build -t mohamedaminesabehy/projet-1.0.0:latest .'
+                                                                    bat 'docker build -t mohamedaminesabehy/projet-0.0.1:latest .'
                                                                                     }
                                                                                   }
                                                                                   }
@@ -60,7 +60,7 @@ pipeline {
 
                                               steps {
                                              bat 'echo "Docker is pushing ...."'
-                                              	bat 'docker push mohamedaminesabehy/projet-1.0.0:latest'
+                                              	bat 'docker push mohamedaminesabehy/projet-0.0.1:latest'
                                                                                                     }  }
       }
     }
