@@ -43,6 +43,13 @@ pipeline {
                                                 -Dsonar.login=sqp_5b3f89f0523442a9c19005e905ea61fd7ab92e77'
                                       }
                                   }
+                                  stage('Build docker image'){
+                                                        steps{
+                                                                script{
+                                                                    bat 'docker build -t mohamedaminesabehy/projet-1.0.0:latest .'
+                                                                                    }
+                                                                                  }
+                                                                                  }
                                        stage('Docker login') {
 
                                          steps {
@@ -53,7 +60,7 @@ pipeline {
 
                                               steps {
                                              bat 'echo "Docker is pushing ...."'
-                                              	bat 'docker push mohamedaminesabehy/Projet-1.0.0:latest'
+                                              	bat 'docker push mohamedaminesabehy/projet-1.0.0:latest'
                                                                                                     }  }
       }
     }
