@@ -48,14 +48,14 @@ public class ProduitController {
                 .orElseThrow(() -> new EntityNotFoundException("Requested product not found"));
     }
 
-    @PostMapping("/Produit")
+    @PostMapping("/Produitadd")
     public Produit addProduit(@RequestBody Produit produit) {
 
         return produitService.save(produit);
     }
     public static final String ERROR_MESSAGE = "Requested task not found";
 
-    @PutMapping("/Produit/{id}")
+    @PutMapping("/Updatep/{id}")
     public ResponseEntity<Produit> update(@RequestBody Produit produit, @PathVariable Long id) {
         if (produitService.existsById(id)) {
             Produit produit1 = produitService.getproduitbyid(id).orElseThrow(
@@ -66,10 +66,7 @@ public class ProduitController {
             produit1.setDisponible(produit.getDisponible());
             produit1.setDatecreation(produit.getDatecreation());
             produit1.setDatemodification(produit.getDatemodification());
-            Categories categorie = produit.getCategorieid();
-            if (categorie != null) {
-                produit.setCategorieid(categorie);
-            }
+
             produitService.save(produit1);
 
             return ResponseEntity.ok().body(produit1);

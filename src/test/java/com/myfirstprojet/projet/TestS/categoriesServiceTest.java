@@ -62,5 +62,24 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
         // Assert
         assertThat(deletedCategories).isEmpty();
     }
+    @Test
+    void updateCategorieTest() {
+        // Arrange
+        Categories categorie = Categories.builder()
+                .nom("Electronics")
+                .qt(10)
+                .datecreation(new Timestamp(System.currentTimeMillis()))
+                .datemodification(new Timestamp(System.currentTimeMillis()))
+                .build();
+        Categories savedCategories = service.save(categorie);
 
+        // Act
+        savedCategories.setNom("Mobile");
+        Categories updatedCategories = service.save(savedCategories);
+
+        // Assert
+        assertThat(updatedCategories).isNotNull();
+        assertThat(updatedCategories.getId()).isEqualTo(savedCategories.getId());
+        assertThat(updatedCategories.getNom()).isEqualTo("Mobile");
+    }
 }
